@@ -1002,6 +1002,11 @@ public class Ventana extends javax.swing.JFrame {
     txtNombre.requestFocus();
     return;
 }
+        if(txtNombre.getText().trim().length() < 2){
+    JOptionPane.showMessageDialog(null,"El nombre debe tener al menos 2 caracteres.");
+    txtNombre.requestFocus();
+    return;
+}
 
        if(txtApellidoPaterno.getText().trim().isEmpty()){
     JOptionPane.showMessageDialog(null,"Ingrese el apellido paterno.");
@@ -1016,6 +1021,11 @@ public class Ventana extends javax.swing.JFrame {
 
        if(txtApellidoMaterno.getText().trim().isEmpty()){
     JOptionPane.showMessageDialog(null,"Ingrese el apellido materno.");
+    txtApellidoMaterno.requestFocus();
+    return;
+}
+        if(txtApellidoMaterno.getText().trim().length() < 2){
+    JOptionPane.showMessageDialog(null,"El apellido materno debe tener al menos 2 caracteres.");
     txtApellidoMaterno.requestFocus();
     return;
 }
