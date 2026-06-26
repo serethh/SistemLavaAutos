@@ -112,8 +112,8 @@ public class Auto {
     }
 
     public void setPlacas(String placas) {
-        this.placas = placas;
-    }
+    this.placas = placas.trim().toUpperCase();
+}
     
     public String getModelo() {
         return modelo;
