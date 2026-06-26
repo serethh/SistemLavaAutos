@@ -1085,6 +1085,20 @@ public class Ventana extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNombreActionPerformed
 
     private void btnGuardarIngresoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarIngresoActionPerformed
+<<<<<<< HEAD
+=======
+        
+       if(txtNombre.getText().trim().isEmpty()){
+    JOptionPane.showMessageDialog(null,"Ingrese el nombre.");
+    txtNombre.requestFocus();
+    return;
+}
+        if(txtNombre.getText().trim().length() < 2){
+    JOptionPane.showMessageDialog(null,"El nombre debe tener al menos 2 caracteres.");
+    txtNombre.requestFocus();
+    return;
+}
+>>>>>>> 678109e6ce422cc87f36742f45b6af1e44b7f449
 
         if (txtNombre.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Ingrese el nombre.");
@@ -1102,6 +1116,7 @@ public class Ventana extends javax.swing.JFrame {
             return;
         }
 
+<<<<<<< HEAD
         if (txtApellidoPaterno.getText().trim().length() < 2) {
             JOptionPane.showMessageDialog(null, "El apellido paterno debe tener al menos 2 caracteres.");
             txtApellidoPaterno.requestFocus();
@@ -1127,6 +1142,18 @@ public class Ventana extends javax.swing.JFrame {
             txtTelefono.requestFocus();
             return;
         }
+=======
+       if(txtApellidoMaterno.getText().trim().isEmpty()){
+    JOptionPane.showMessageDialog(null,"Ingrese el apellido materno.");
+    txtApellidoMaterno.requestFocus();
+    return;
+}
+        if(txtApellidoMaterno.getText().trim().length() < 2){
+    JOptionPane.showMessageDialog(null,"El apellido materno debe tener al menos 2 caracteres.");
+    txtApellidoMaterno.requestFocus();
+    return;
+}
+>>>>>>> 678109e6ce422cc87f36742f45b6af1e44b7f449
 
         if (txtTelefono.getText().trim().length() != 10) {
             JOptionPane.showMessageDialog(null, "El teléfono debe tener 10 dígitos.");
