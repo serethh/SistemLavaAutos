@@ -53,7 +53,12 @@ public class Ventana extends javax.swing.JFrame {
 
         });
         configurarTabla();
-    }
+        btnImprimir.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnImprimirActionPerformed(evt);
+          }
+         });
+        }
 
     private void cargarFecha(){
         Date hoy = new Date();
@@ -222,7 +227,7 @@ public class Ventana extends javax.swing.JFrame {
         btnIngreso.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
         btnIngreso.setForeground(new java.awt.Color(255, 255, 255));
         btnIngreso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ingresar24.png"))); // NOI18N
-        btnIngreso.setText("Ingresar\n");
+        btnIngreso.setText("Ingresar ");
         btnIngreso.setContentAreaFilled(false);
         btnIngreso.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnIngreso.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ingresar24.png"))); // NOI18N
@@ -639,6 +644,7 @@ public class Ventana extends javax.swing.JFrame {
         jLabel27.setText("Observaciones:");
 
         txtCosto.setFont(new java.awt.Font("URW Gothic", 0, 14)); // NOI18N
+        txtCosto.addActionListener(this::txtCostoActionPerformed);
 
         jLabel28.setFont(new java.awt.Font("URW Gothic", 2, 18)); // NOI18N
         jLabel28.setText("Tipo de pago:");
@@ -653,9 +659,10 @@ public class Ventana extends javax.swing.JFrame {
         btnImprimir.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         btnImprimir.setForeground(new java.awt.Color(255, 255, 255));
         btnImprimir.setText("Imprimir ticket");
+        btnImprimir.addActionListener(this::btnImprimirActionPerformed);
 
         cbTipoPago.setFont(new java.awt.Font("URW Bookman", 0, 16)); // NOI18N
-        cbTipoPago.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar", "Efectivo", "Transferencias", "Tarjeta" }));
+        cbTipoPago.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar", "Efectivo", "Transferencia", "Tarjeta" }));
         cbTipoPago.setOpaque(true);
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logocar.png"))); // NOI18N
@@ -1070,6 +1077,7 @@ auto.setApellidoMaterno(txtApellidoMaterno.getText().trim());
 auto.setTelefono(txtTelefono.getText().trim());
 auto.setColor(txtColor.getText().trim());
 auto.setPlacas(placas);
+auto.setTipoVehiculo(cbTipoVehiculo.getSelectedItem().toString());
 auto.setModelo(txtModelo.getText().trim());
 
 SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
@@ -1137,6 +1145,29 @@ txtNombre.requestFocus();
         dispose();
     }
     }//GEN-LAST:event_btnSalirActionPerformed
+
+    private void btnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirActionPerformed
+    if (cbBuscarEgreso.getSelectedItem() == null) {
+        JOptionPane.showMessageDialog(null, "Por favor, busque y seleccione una placa válida para imprimir.");
+        return;
+    }
+    
+    String placa = cbBuscarEgreso.getSelectedItem().toString();
+    Auto autoParaTicket = controlador.obtenerAuto(placa);
+    
+    if (autoParaTicket == null) {
+        JOptionPane.showMessageDialog(null, "No se encontraron registros del vehículo.");
+        return;
+    }
+    
+    String linkDrive = "https://drive.google.com/file/d/13z-_B-Vvh2gYYmjg-smebN7t_CtgG6jU/view?usp=drivesdk";
+    
+    ticket.generarTicket(autoParaTicket, linkDrive);
+    }//GEN-LAST:event_btnImprimirActionPerformed
+
+    private void txtCostoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCostoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCostoActionPerformed
 
     /**
      * @param args the command line arguments

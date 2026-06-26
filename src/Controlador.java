@@ -29,23 +29,34 @@ public class Controlador {
 
 
     public double obtenerCosto(String servicio) {
-        switch (servicio) {
-            case "Lavado exterior":
-                return 80;
+       switch (servicio) {
+        case "Lavado exterior":
+            return 80;
 
-            case "Lavado interior":
-                return 100;
+        case "Lavado interior":
+            return 100;
 
-            case "Lavado completo":
-                return 180;
+        case "Lavado completo":
+            return 180;
 
-            case "Encerado":
-                return 250;
+        case "Encerado":
+            return 250;
 
-            default:
-                return 0;
+        case "Pulido":
+            return 350;
 
-        }
+        case "Aspirado":
+            return 60;
+
+        case "Lavado de motor":
+            return 150;
+
+        case "Detallado":
+            return 500;
+
+        default:
+            return 0;
+      }
     }
 
     public boolean registrarServicio(String placas,String servicio,boolean terminado) {
