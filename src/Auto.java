@@ -18,10 +18,8 @@ public class Auto {
     private String fechaIngreso;
     private String horaIngreso;
 
-    private String tipoServicio;
-    private double costo;
-    private boolean servicioTerminado;
-
+    private TipoServicio servicio;
+    
     private String horaEgreso;
     private String observaciones;
     private String tipoPago;
@@ -50,9 +48,6 @@ public class Auto {
         this.placas = placas;
         this.fechaIngreso = fechaIngreso;
         this.horaIngreso = horaIngreso;
-        this.tipoServicio = tipoServicio;
-        this.costo = costo;
-        this.servicioTerminado = servicioTerminado;
         this.horaEgreso = horaEgreso;
         this.observaciones = observaciones;
         this.tipoPago = tipoPago;
@@ -138,29 +133,13 @@ public class Auto {
     public void setHoraIngreso(String horaIngreso) {
         this.horaIngreso = horaIngreso;
     }
-
-    public String getTipoServicio() {
-        return tipoServicio;
+    
+    public TipoServicio getServicio() {
+        return servicio;
     }
 
-    public void setTipoServicio(String tipoServicio) {
-        this.tipoServicio = tipoServicio;
-    }
-
-    public double getCosto() {
-        return costo;
-    }
-
-    public void setCosto(double costo) {
-        this.costo = costo;
-    }
-
-    public boolean isServicioTerminado() {
-        return servicioTerminado;
-    }
-
-    public void setServicioTerminado(boolean servicioTerminado) {
-        this.servicioTerminado = servicioTerminado;
+    public void setServicio(TipoServicio servicio) {
+        this.servicio = servicio;
     }
 
     public String getHoraEgreso() {

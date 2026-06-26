@@ -60,13 +60,16 @@ public class Controlador {
     }
 
     public boolean registrarServicio(String placas,String servicio,boolean terminado) {
-        Auto auto = buscarPlaca(placas);
+         Auto auto = buscarPlaca(placas);
         if (auto == null) {
             return false;
         }
-        auto.setTipoServicio(servicio);
-        auto.setCosto(obtenerCosto(servicio));
-        auto.setServicioTerminado(terminado);
+        TipoServicio ts = new TipoServicio(
+                servicio,
+                obtenerCosto(servicio),
+                terminado
+        );
+        auto.setServicio(ts);
         if (terminado) {
             auto.setEstado("Terminado");
         } else {
@@ -76,17 +79,25 @@ public class Controlador {
     }
 
     public boolean registrarEgreso(String placas,String hora,String observaciones,String pago) {
-        Auto auto = buscarPlaca(placas);
+         Auto auto = buscarPlaca(placas);
+
         if (auto == null) {
             return false;
         }
-        if (!auto.isServicioTerminado()) {
+
+        if (auto.getServicio() == null) {
             return false;
         }
+
+        if (!auto.getServicio().isServicioTerminado()) {
+            return false;
+        }
+
         auto.setHoraEgreso(hora);
         auto.setObservaciones(observaciones);
         auto.setTipoPago(pago);
         auto.setEstado("Entregado");
+
         return true;
 
     }
@@ -108,26 +119,35 @@ public class Controlador {
         
     public boolean servicioTerminado(String placas){
         Auto a = buscarPlaca(placas);
-        if(a==null){
+        if (a == null) {
             return false;
         }
-        return a.isServicioTerminado();
+        if (a.getServicio() == null) {
+            return false;
+        }
+        return a.getServicio().isServicioTerminado();
     }
 
     public double obtenerCostoVehiculo(String placas){
         Auto a = buscarPlaca(placas);
-        if(a==null){
+        if(a == null){
             return 0;
         }
-        return a.getCosto();
+        if(a.getServicio() == null){
+            return 0;
+        }
+        return a.getServicio().getCosto();
     }
     
     public String obtenerServicio(String placas){
         Auto a = buscarPlaca(placas);
-        if(a==null){
+        if(a == null){
             return "";
         }
-        return a.getTipoServicio();
+        if(a.getServicio() == null){
+            return "";
+        }
+        return a.getServicio().getTipoServicio();
     }
     
     public void llenarTabla(DefaultTableModel modelo){
@@ -147,9 +167,9 @@ public class Controlador {
                 auto.getModelo(),
                 auto.getFechaIngreso(),
                 auto.getHoraIngreso(),
-                auto.getTipoServicio(),
-                auto.getCosto(),
-                auto.isServicioTerminado() ? "Sí" : "No",
+                auto.getServicio() != null ? auto.getServicio().getTipoServicio() : "",
+                auto.getServicio() != null ? auto.getServicio().getCosto() : 0,
+                auto.getServicio() != null && auto.getServicio().isServicioTerminado() ? "Sí" : "No",
                 auto.getHoraEgreso(),
                 auto.getTipoPago(),
                 auto.getObservaciones(),
@@ -160,9 +180,7 @@ public class Controlador {
     }
     
     public void buscarAuto(String placas, DefaultTableModel modelo){
-
         modelo.setRowCount(0);
-
         for(Auto auto : autos){
 
             if(auto.getPlacas().toUpperCase().contains(placas.toUpperCase())){
@@ -178,9 +196,9 @@ public class Controlador {
                     auto.getModelo(),
                     auto.getFechaIngreso(),
                     auto.getHoraIngreso(),
-                    auto.getTipoServicio(),
-                    auto.getCosto(),
-                    auto.isServicioTerminado() ? "Sí" : "No",
+                    auto.getServicio() != null ? auto.getServicio().getTipoServicio() : "",
+                    auto.getServicio() != null ? auto.getServicio().getCosto() : 0,
+                    auto.getServicio() != null && auto.getServicio().isServicioTerminado() ? "Sí" : "No",
                     auto.getHoraEgreso(),
                     auto.getTipoPago(),
                     auto.getObservaciones(),
@@ -210,17 +228,22 @@ public class Controlador {
 
     }
     
-    public void actualizarServicio(String placa,String servicio,boolean terminado,String observaciones){
+    public void actualizarServicio(String placa,
+                               String servicio,
+                               boolean terminado,
+                               String observaciones){
 
         Auto auto = obtenerAuto(placa);
 
         if(auto != null){
 
-            auto.setTipoServicio(servicio);
+            TipoServicio ts = new TipoServicio(
+                    servicio,
+                    obtenerCosto(servicio),
+                    terminado
+            );
 
-            auto.setCosto(obtenerCosto(servicio));
-
-            auto.setServicioTerminado(terminado);
+            auto.setServicio(ts);
 
             auto.setObservaciones(observaciones);
 

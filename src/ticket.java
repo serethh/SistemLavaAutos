@@ -111,7 +111,11 @@ public class ticket {
             
             documento.add(separador);
 
-            Paragraph pServ = new Paragraph("SERVICIO: " + auto.getTipoServicio(), fuenteContenido);
+            Paragraph pServ = new Paragraph(
+                    "SERVICIO: " +
+                    (auto.getServicio() != null ? auto.getServicio().getTipoServicio() : "Sin servicio"),
+                    fuenteContenido
+            );
             pServ.setLeading(11f);
             documento.add(pServ);
 
@@ -125,7 +129,11 @@ public class ticket {
             
             documento.add(separador);
 
-            Paragraph total = new Paragraph("TOTAL A PAGAR: $" + auto.getCosto(), fuenteTitulo);
+            Paragraph total = new Paragraph(
+                    "TOTAL A PAGAR: $" +
+                    (auto.getServicio() != null ? auto.getServicio().getCosto() : 0),
+                    fuenteTitulo
+            );
             total.setAlignment(Element.ALIGN_CENTER);
             total.setLeading(14f);
             documento.add(total);
