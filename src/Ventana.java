@@ -1001,6 +1001,11 @@ public class Ventana extends javax.swing.JFrame {
     txtApellidoPaterno.requestFocus();
     return;
 }
+        if(txtApellidoPaterno.getText().trim().length() < 2){
+    JOptionPane.showMessageDialog(null,"El apellido paterno debe tener al menos 2 caracteres.");
+    txtApellidoPaterno.requestFocus();
+    return;
+}
 
        if(txtApellidoMaterno.getText().trim().isEmpty()){
     JOptionPane.showMessageDialog(null,"Ingrese el apellido materno.");
@@ -1121,6 +1126,16 @@ txtNombre.requestFocus();
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         dispose();
+        int opcion = JOptionPane.showConfirmDialog(
+            this,
+            "¿Está seguro de que desea salir?",
+            "Confirmar salida",
+            JOptionPane.YES_NO_OPTION,
+            JOptionPane.QUESTION_MESSAGE);
+
+    if(opcion == JOptionPane.YES_OPTION){
+        dispose();
+    }
     }//GEN-LAST:event_btnSalirActionPerformed
 
     /**
