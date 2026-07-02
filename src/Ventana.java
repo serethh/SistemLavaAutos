@@ -220,7 +220,6 @@ public class Ventana extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         menu = new javax.swing.JPanel();
@@ -234,29 +233,6 @@ public class Ventana extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         tabbed = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel23 = new javax.swing.JLabel();
-        cbBuscarEgreso = new javax.swing.JComboBox<>();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        txtHoraEgreso = new javax.swing.JTextField();
-        jLabel26 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        txtObservacionesEgreso = new javax.swing.JTextArea();
-        jLabel27 = new javax.swing.JLabel();
-        txtCosto = new javax.swing.JTextField();
-        jLabel28 = new javax.swing.JLabel();
-        btonGuardarEgreso = new javax.swing.JButton();
-        cbTipoPago = new javax.swing.JComboBox<>();
-        btnBuscarEgreso = new javax.swing.JButton();
-        jPanel4 = new javax.swing.JPanel();
-        jLabel29 = new javax.swing.JLabel();
-        txtBuscarVista = new javax.swing.JTextField();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        tblAutos = new javax.swing.JTable();
-        btnSalir = new javax.swing.JButton();
-        btnBuscarVista = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -296,6 +272,29 @@ public class Ventana extends javax.swing.JFrame {
         jLabel22 = new javax.swing.JLabel();
         btnBuscarRegistro = new javax.swing.JButton();
         btnGuardarRegistro = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel23 = new javax.swing.JLabel();
+        cbBuscarEgreso = new javax.swing.JComboBox<>();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        txtHoraEgreso = new javax.swing.JTextField();
+        jLabel26 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txtObservacionesEgreso = new javax.swing.JTextArea();
+        jLabel27 = new javax.swing.JLabel();
+        txtCosto = new javax.swing.JTextField();
+        jLabel28 = new javax.swing.JLabel();
+        btonGuardarEgreso = new javax.swing.JButton();
+        cbTipoPago = new javax.swing.JComboBox<>();
+        btnBuscarEgreso = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel29 = new javax.swing.JLabel();
+        txtBuscarVista = new javax.swing.JTextField();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        tblAutos = new javax.swing.JTable();
+        btnSalir = new javax.swing.JButton();
+        btnBuscarVista = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -423,212 +422,11 @@ public class Ventana extends javax.swing.JFrame {
                 .addComponent(btnEgreso, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(361, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane1.setBackground(new java.awt.Color(255, 255, 255));
         jTabbedPane1.setMaximumSize(getMaximumSize());
-
-        jPanel3.setBackground(new java.awt.Color(248, 249, 250));
-
-        jLabel23.setFont(new java.awt.Font("URW Bookman", 2, 48)); // NOI18N
-        jLabel23.setForeground(new java.awt.Color(0, 0, 153));
-        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel23.setText("Egreso");
-
-        cbBuscarEgreso.setEditable(true);
-        cbBuscarEgreso.setFont(new java.awt.Font("URW Bookman", 0, 15)); // NOI18N
-        cbBuscarEgreso.setOpaque(true);
-
-        jLabel24.setFont(new java.awt.Font("URW Gothic", 2, 18)); // NOI18N
-        jLabel24.setText("Buscar vehiculo");
-
-        jLabel25.setFont(new java.awt.Font("URW Gothic", 2, 18)); // NOI18N
-        jLabel25.setText("Hora de egreso:");
-
-        txtHoraEgreso.setFont(new java.awt.Font("URW Gothic", 0, 14)); // NOI18N
-
-        jLabel26.setFont(new java.awt.Font("URW Gothic", 2, 18)); // NOI18N
-        jLabel26.setText("Costo:");
-
-        txtObservacionesEgreso.setColumns(20);
-        txtObservacionesEgreso.setRows(5);
-        jScrollPane2.setViewportView(txtObservacionesEgreso);
-
-        jLabel27.setFont(new java.awt.Font("URW Gothic", 2, 18)); // NOI18N
-        jLabel27.setText("Observaciones:");
-
-        txtCosto.setFont(new java.awt.Font("URW Gothic", 0, 14)); // NOI18N
-        txtCosto.addActionListener(this::txtCostoActionPerformed);
-
-        jLabel28.setFont(new java.awt.Font("URW Gothic", 2, 18)); // NOI18N
-        jLabel28.setText("Tipo de pago:");
-
-        btonGuardarEgreso.setBackground(new java.awt.Color(0, 188, 212));
-        btonGuardarEgreso.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
-        btonGuardarEgreso.setForeground(new java.awt.Color(255, 255, 255));
-        btonGuardarEgreso.setText("Guardar");
-        btonGuardarEgreso.addActionListener(this::btonGuardarEgresoActionPerformed);
-
-        cbTipoPago.setFont(new java.awt.Font("URW Bookman", 0, 16)); // NOI18N
-        cbTipoPago.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar", "Efectivo", "Transferencia", "Tarjeta" }));
-        cbTipoPago.setOpaque(true);
-
-        btnBuscarEgreso.setText("Buscar");
-        btnBuscarEgreso.addActionListener(this::btnBuscarEgresoActionPerformed);
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(215, 215, 215)
-                .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addComponent(cbBuscarEgreso, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(278, 278, 278)
-                .addComponent(btnBuscarEgreso))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addComponent(jLabel25)
-                .addGap(30, 30, 30)
-                .addComponent(txtHoraEgreso, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addComponent(jLabel27))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(118, 118, 118)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 582, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addComponent(jLabel26)
-                .addGap(107, 107, 107)
-                .addComponent(txtCosto, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addComponent(jLabel28)
-                .addGap(48, 48, 48)
-                .addComponent(cbTipoPago, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(382, 382, 382)
-                .addComponent(btonGuardarEgreso))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(jLabel23)
-                .addGap(33, 33, 33)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel24)
-                    .addComponent(cbBuscarEgreso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addComponent(btnBuscarEgreso)))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(jLabel25))
-                    .addComponent(txtHoraEgreso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
-                .addComponent(jLabel27)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel26)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(txtCosto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(26, 26, 26)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(jLabel28))
-                    .addComponent(cbTipoPago, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(btonGuardarEgreso))
-        );
-
-        jTabbedPane1.addTab("Egreso", jPanel3);
-
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
-
-        jLabel29.setFont(new java.awt.Font("URW Bookman", 2, 48)); // NOI18N
-        jLabel29.setForeground(new java.awt.Color(0, 0, 153));
-        jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel29.setText("Buscar Vehiculo");
-
-        txtBuscarVista.setFont(new java.awt.Font("URW Gothic", 0, 14)); // NOI18N
-
-        tblAutos.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-
-            }
-        ));
-        jScrollPane5.setViewportView(tblAutos);
-
-        btnSalir.setBackground(new java.awt.Color(0, 188, 212));
-        btnSalir.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
-        btnSalir.setForeground(new java.awt.Color(255, 255, 255));
-        btnSalir.setText("Salir");
-        btnSalir.addActionListener(this::btnSalirActionPerformed);
-
-        btnBuscarVista.setText("Buscar");
-        btnBuscarVista.addActionListener(this::btnBuscarVistaActionPerformed);
-
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logocar.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(74, 74, 74)
-                .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 424, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(txtBuscarVista, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(79, 79, 79)
-                .addComponent(btnBuscarVista))
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 869, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(234, 234, 234)
-                .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(67, 67, 67)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(jLabel29)
-                .addGap(28, 28, 28)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtBuscarVista, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(btnBuscarVista)))
-                .addGap(27, 27, 27)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addComponent(btnSalir))
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
-
-        jTabbedPane1.addTab("Buscar", jPanel4);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -972,6 +770,207 @@ public class Ventana extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Registro", jPanel2);
 
+        jPanel3.setBackground(new java.awt.Color(248, 249, 250));
+
+        jLabel23.setFont(new java.awt.Font("URW Bookman", 2, 48)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(0, 0, 153));
+        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel23.setText("Egreso");
+
+        cbBuscarEgreso.setEditable(true);
+        cbBuscarEgreso.setFont(new java.awt.Font("URW Bookman", 0, 15)); // NOI18N
+        cbBuscarEgreso.setOpaque(true);
+
+        jLabel24.setFont(new java.awt.Font("URW Gothic", 2, 18)); // NOI18N
+        jLabel24.setText("Buscar vehiculo");
+
+        jLabel25.setFont(new java.awt.Font("URW Gothic", 2, 18)); // NOI18N
+        jLabel25.setText("Hora de egreso:");
+
+        txtHoraEgreso.setFont(new java.awt.Font("URW Gothic", 0, 14)); // NOI18N
+
+        jLabel26.setFont(new java.awt.Font("URW Gothic", 2, 18)); // NOI18N
+        jLabel26.setText("Costo:");
+
+        txtObservacionesEgreso.setColumns(20);
+        txtObservacionesEgreso.setRows(5);
+        jScrollPane2.setViewportView(txtObservacionesEgreso);
+
+        jLabel27.setFont(new java.awt.Font("URW Gothic", 2, 18)); // NOI18N
+        jLabel27.setText("Observaciones:");
+
+        txtCosto.setFont(new java.awt.Font("URW Gothic", 0, 14)); // NOI18N
+        txtCosto.addActionListener(this::txtCostoActionPerformed);
+
+        jLabel28.setFont(new java.awt.Font("URW Gothic", 2, 18)); // NOI18N
+        jLabel28.setText("Tipo de pago:");
+
+        btonGuardarEgreso.setBackground(new java.awt.Color(0, 188, 212));
+        btonGuardarEgreso.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
+        btonGuardarEgreso.setForeground(new java.awt.Color(255, 255, 255));
+        btonGuardarEgreso.setText("Guardar");
+        btonGuardarEgreso.addActionListener(this::btonGuardarEgresoActionPerformed);
+
+        cbTipoPago.setFont(new java.awt.Font("URW Bookman", 0, 16)); // NOI18N
+        cbTipoPago.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar", "Efectivo", "Transferencia", "Tarjeta" }));
+        cbTipoPago.setOpaque(true);
+
+        btnBuscarEgreso.setText("Buscar");
+        btnBuscarEgreso.addActionListener(this::btnBuscarEgresoActionPerformed);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(215, 215, 215)
+                .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(6, 6, 6)
+                .addComponent(cbBuscarEgreso, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(278, 278, 278)
+                .addComponent(btnBuscarEgreso))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addComponent(jLabel25)
+                .addGap(30, 30, 30)
+                .addComponent(txtHoraEgreso, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addComponent(jLabel27))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(118, 118, 118)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 582, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addComponent(jLabel26)
+                .addGap(107, 107, 107)
+                .addComponent(txtCosto, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addComponent(jLabel28)
+                .addGap(48, 48, 48)
+                .addComponent(cbTipoPago, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(382, 382, 382)
+                .addComponent(btonGuardarEgreso))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel23)
+                .addGap(33, 33, 33)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel24)
+                    .addComponent(cbBuscarEgreso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(btnBuscarEgreso)))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(jLabel25))
+                    .addComponent(txtHoraEgreso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
+                .addComponent(jLabel27)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel26)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(txtCosto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(26, 26, 26)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(jLabel28))
+                    .addComponent(cbTipoPago, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(btonGuardarEgreso))
+        );
+
+        jTabbedPane1.addTab("Egreso", jPanel3);
+
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel29.setFont(new java.awt.Font("URW Bookman", 2, 48)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(0, 0, 153));
+        jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel29.setText("Buscar Vehiculo");
+
+        txtBuscarVista.setFont(new java.awt.Font("URW Gothic", 0, 14)); // NOI18N
+
+        tblAutos.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane5.setViewportView(tblAutos);
+
+        btnSalir.setBackground(new java.awt.Color(0, 188, 212));
+        btnSalir.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
+        btnSalir.setForeground(new java.awt.Color(255, 255, 255));
+        btnSalir.setText("Salir");
+        btnSalir.addActionListener(this::btnSalirActionPerformed);
+
+        btnBuscarVista.setText("Buscar");
+        btnBuscarVista.addActionListener(this::btnBuscarVistaActionPerformed);
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logocar.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(74, 74, 74)
+                .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 424, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addComponent(txtBuscarVista, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(79, 79, 79)
+                .addComponent(btnBuscarVista))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 869, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(234, 234, 234)
+                .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(67, 67, 67)
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(jLabel29)
+                .addGap(28, 28, 28)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtBuscarVista, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(btnBuscarVista)))
+                .addGap(27, 27, 27)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addComponent(btnSalir))
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
+
+        jTabbedPane1.addTab("Buscar", jPanel4);
+
         javax.swing.GroupLayout tabbedLayout = new javax.swing.GroupLayout(tabbed);
         tabbed.setLayout(tabbedLayout);
         tabbedLayout.setHorizontalGroup(
@@ -998,9 +997,9 @@ public class Ventana extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(8, 8, 8)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tabbed, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(tabbed, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1085,8 +1084,7 @@ public class Ventana extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNombreActionPerformed
 
     private void btnGuardarIngresoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarIngresoActionPerformed
-<<<<<<< HEAD
-=======
+
         
        if(txtNombre.getText().trim().isEmpty()){
     JOptionPane.showMessageDialog(null,"Ingrese el nombre.");
@@ -1098,7 +1096,6 @@ public class Ventana extends javax.swing.JFrame {
     txtNombre.requestFocus();
     return;
 }
->>>>>>> 678109e6ce422cc87f36742f45b6af1e44b7f449
 
         if (txtNombre.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Ingrese el nombre.");
@@ -1116,7 +1113,6 @@ public class Ventana extends javax.swing.JFrame {
             return;
         }
 
-<<<<<<< HEAD
         if (txtApellidoPaterno.getText().trim().length() < 2) {
             JOptionPane.showMessageDialog(null, "El apellido paterno debe tener al menos 2 caracteres.");
             txtApellidoPaterno.requestFocus();
@@ -1142,7 +1138,7 @@ public class Ventana extends javax.swing.JFrame {
             txtTelefono.requestFocus();
             return;
         }
-=======
+        
        if(txtApellidoMaterno.getText().trim().isEmpty()){
     JOptionPane.showMessageDialog(null,"Ingrese el apellido materno.");
     txtApellidoMaterno.requestFocus();
@@ -1153,7 +1149,7 @@ public class Ventana extends javax.swing.JFrame {
     txtApellidoMaterno.requestFocus();
     return;
 }
->>>>>>> 678109e6ce422cc87f36742f45b6af1e44b7f449
+        
 
         if (txtTelefono.getText().trim().length() != 10) {
             JOptionPane.showMessageDialog(null, "El teléfono debe tener 10 dígitos.");
